@@ -19,6 +19,7 @@ func main() {
 	outputText("Tax Rate: ")
 	inputText(&taxRate)
 
+	// variables def
 	ebt, profit, ratio := calculateTax(revenue, expenses, taxRate)
 
 	fmt.Printf("Earnings Before Tax - EBT: %0.2f\n", ebt)
@@ -46,21 +47,3 @@ func outputText(text string) {
 func inputText(variable *float64) {
 	fmt.Scan(variable)
 }
-
-// // Earnings Before Tax function
-// func earningsBeforeTax(revenue float64, expenses float64) (ebt float64) {
-// 	ebt = revenue - expenses
-// 	return ebt
-// }
-
-// // Earnings After Tax function
-// func earningsAfterTax(ebt float64, taxRate float64) (profit float64) {
-// 	profit = ebt * (1 - taxRate/100)
-// 	return profit
-// }
-
-// // Ratio function
-// func ratio(ebt float64, profit float64) (ratio float64) {
-// 	ratio = ebt / profit
-// 	return ratio
-// }
